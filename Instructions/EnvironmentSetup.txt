@@ -1,0 +1,45 @@
+#
+## This file gives instructions on setting up the environment for running experiments using the SDF Code
+## Mandatory steps marked by *
+#
+
+#Setting up the environment on a local linux-server or Windows Linux subsystem
+1) Install python and pip. Update them too (*)
+2) Create a virtual environment using virtualenv or pyenv (refer to instructions in python environments below) 
+3) Use pip to install all the requirements listed in the requirements.txt 
+
+#NOTE: 
+a) When compiling python form source or using tools like pyenv that compile python from source, install lzma and lzma-dev before compilingv
+b) Numpy version compatibility needs to be checked (1.19.2) might be the only one
+c) No python version compatibility issue related to tensorflow or pandas. But check the documents for the package version you are installing
+
+#Managing multiple python versions and environments using pyenv
+#Linux or Linux Subsystems(Windows) 
+NOTE: Instructions listed from https://realpython.com/intro-to-pyenv/ 
+1) Install pyenv using the installer (curl command) 
+2) Add the commands to your bashrc and bash profiles to automatically load the environments when moving into the work folder
+# Add pyenv executable to PATH and
+# enable shims by adding the following
+# to ~/.profile:
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+# If your ~/.profile sources ~/.bashrc,
+# the lines need to be inserted before the part
+# that does that. See the README for another option.
+# If you have ~/.bash_profile, make sure that it
+# also executes the above lines -- e.g. by
+# copying them there or by sourcing ~/.profile
+# Load pyenv into the shell by adding
+# the following to ~/.bashrc:
+eval "$(pyenv init -)"
+# Make sure to restart your entire logon session
+# for changes to profile files to take effect.
+# Load pyenv-virtualenv automatically by adding
+# the following to ~/.bashrc:
+eval "$(pyenv virtualenv-init -)"
+3) Create virtual environment <enviornment_name> for the project  
+4) Activate virtual environment after moving to the work or project folder
+
+#Google-Colab
+1) 
