@@ -1,0 +1,10 @@
+itertools
+numpy
+scipy
+pandas
+matplotlib
+scikit-learn
+tensorflow
+tensorflow_federated
+skimage
+seaborn
